@@ -9,12 +9,12 @@
   <body>
     <!--  Header Start -->
     <header
-      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+      class="absolute top-0 left-0 z-10 flex items-center w-full bg-transparent"
     >
       <div class="container">
-        <div class="flex items-center justify-between relative">
+        <div class="relative flex items-center justify-between">
           <div class="px-4">
-            <a href="#home" class="font-bold text-lg text-primary block py-6"
+            <a href="#home" class="block py-6 text-lg font-bold text-primary"
               >DG</a
             >
           </div>
@@ -23,17 +23,17 @@
               id="hamburger"
               name="hamburger"
               type="button"
-              class="block absolute right-4 lg:hidden"
+              class="absolute block right-4 lg:hidden"
               aria-label="Toggle Navigation Menu"
             >
               <span
-                class="hamburger-line transition duration-300 ease-in-out origin-top-left"
+                class="transition duration-300 ease-in-out origin-top-left hamburger-line"
               ></span>
               <span
-                class="hamburger-line transition duration-300 ease-in-out"
+                class="transition duration-300 ease-in-out hamburger-line"
               ></span>
               <span
-                class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
+                class="transition duration-300 ease-in-out origin-bottom-left hamburger-line"
               ></span>
             </button>
 
@@ -41,46 +41,46 @@
               id="nav-menu"
               class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
             >
-              <ul class="block lg:flex font-semibold">
+              <ul class="block font-semibold lg:flex">
                 <li class="group">
                   <a
                     href="#home"
-                    class="text-base text-dark py-2 mx-8 group-hover:text-primary"
+                    class="py-2 mx-8 text-base text-dark group-hover:text-primary"
                     >Home</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#about"
-                    class="text-base text-dark py-2 mx-8 group-hover:text-primary"
+                    class="py-2 mx-8 text-base text-dark group-hover:text-primary"
                     >About</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#portfolio"
-                    class="text-base text-dark py-2 mx-8 group-hover:text-primary"
+                    class="py-2 mx-8 text-base text-dark group-hover:text-primary"
                     >Portfolio</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#workingExperiences"
-                    class="text-base text-dark py-2 mx-8 group-hover:text-primary"
+                    class="py-2 mx-8 text-base text-dark group-hover:text-primary"
                     >Working Experience</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#blog"
-                    class="text-base text-dark py-2 mx-8 group-hover:text-primary"
+                    class="py-2 mx-8 text-base text-dark group-hover:text-primary"
                     >Blog</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#contact"
-                    class="text-base text-dark py-2 mx-8 group-hover:text-primary"
+                    class="py-2 mx-8 text-base text-dark group-hover:text-primary"
                     >Contact</a
                   >
                 </li>
@@ -96,31 +96,31 @@
     <section id="home" class="pt-36">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full self-center px-4 lg:w-1/2">
+          <div class="self-center w-full px-4 lg:w-1/2">
             <h1 class="text-base font-semibold text-primary md:text-xl">
               Halo semua 👋, saya
-              <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl"
+              <span class="block mt-1 text-4xl font-bold text-dark lg:text-5xl"
                 >Dave Guardyan Pakpahan</span
               >
             </h1>
-            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">
+            <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">
               Fullstack Developer
             </h2>
             <p
-              class="font-semibold italic text-secondary mb-10 leading-relaxed"
+              class="mb-10 italic font-semibold leading-relaxed text-secondary"
             >
               Detail-oriented developer crafting innovative solutions for
               education, thriving in dynamic environments, advancing technology
               collaboratively
-              <!-- <span class="text-dark font-bold">Bukan!</span> -->
+              <!-- <span class="font-bold text-dark">Bukan!</span> -->
             </p>
             <a
-              href="#"
-              class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg opacity-80 transition duration-300 ease-in-out"
+              href="https://api.whatsapp.com/send/?phone=6282350496224&text&type=phone_number&app_absent=0"
+              class="px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out rounded-full bg-primary hover:shadow-lg opacity-80"
               >Hire Me!</a
             >
             <a
-              class="py-3 px-8 text-base hover:text-primary transition duration-300 hover:underline hover:font-semibold"
+              class="px-8 py-3 text-base transition duration-300 hover:text-primary hover:underline hover:font-semibold"
               href="dist/documents/Dave Guardyan Pakpahan - Web Developer.pdf"
               download="Dave Guardyan Pakpahan Berkas Kelengkapan - Programming.pdf"
               target="-blank"
@@ -128,7 +128,7 @@
             >
           </div>
 
-          <div class="w-full self-end px-4 lg:w-1/2">
+          <div class="self-end w-full px-4 lg:w-1/2">
             <div class="relative mt-10 lg:mt-9 lg:right-0">
               <img
                 src="dist/img/davegpakpahan.webp"
@@ -136,7 +136,7 @@
                 class="max-w-full mx-auto"
               />
               <span
-                class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-125"
+                class="absolute bottom-0 -translate-x-1/2 -z-10 left-1/2 md:scale-125"
               >
                 <svg
                   width="400"
@@ -159,17 +159,17 @@
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="pt-36 pb-32">
+    <section id="about" class="pb-32 pt-36">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h4 class="font-bold uppercase text-primary text-lg mb-3">
+            <h4 class="mb-3 text-lg font-bold uppercase text-primary">
               About Me
             </h4>
-            <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">
+            <h2 class="max-w-md mb-5 text-3xl font-bold text-dark lg:text-4xl">
               Innovative Problem Solver | Tech Pioneer
             </h2>
-            <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
+            <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">
               Experienced software developer with a proven track record of 2
               years in crafting innovative solutions at Sekolah Kristen Yahya.
               Proficient in developing custom software to meet the unique
@@ -181,10 +181,10 @@
             </p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
-            <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl pt-10">
+            <h3 class="pt-10 mb-4 text-2xl font-semibold text-dark lg:text-3xl">
               Let's Connect
             </h3>
-            <p class="font-medium text-base text-secondary mb-6 lg:text-lg">
+            <p class="mb-6 text-base font-medium text-secondary lg:text-lg">
               Stay updated with exclusive insights, project updates, and
               inspirational content on social media. Let's engage in innovative
               discussions!
@@ -194,7 +194,7 @@
               <a
                 href="https://www.linkedin.com/in/dave-guardyan-pakpahan/"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
+                class="flex items-center justify-center mr-3 rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
               >
                 <svg
                   class="fill-current"
@@ -211,9 +211,9 @@
               </a>
               <!-- Istagram -->
               <a
-                href="https://www.linkedin.com/in/dave-guardyan-pakpahan/"
+                href="https://instagram.com/dave_gordy"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
+                class="flex items-center justify-center mr-3 rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
               >
                 <svg
                   class="fill-current"
@@ -232,7 +232,7 @@
               <a
                 href="https://github.com/neet693/"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
+                class="flex items-center justify-center mr-3 rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
               >
                 <svg
                   class="fill-current"
@@ -255,13 +255,13 @@
     <!-- About Section End -->
 
     <!-- Portfolio Section Start -->
-    <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+    <section id="portfolio" class="pb-16 pt-36 bg-slate-100">
       <div class="container">
         <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
+          <div class="max-w-xl mx-auto mb-16 text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
             <h2
-              class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl"
+              class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl"
             >
               My Projects
             </h2>
@@ -271,89 +271,226 @@
               in software development.
             </p>
           </div>
-          <div class="w-full px-4 flex flex-wrap justify-center">
+          <div class="flex flex-wrap justify-center w-full px-4">
             <!-- Project Places -->
-            <div class="mb-12 p-4 md:w-1/2">
-              <div class="rounded-md shadow-md overflow-hidden">
-                <img
-                  src="dist/img/projects/project-siay.webp"
-                  alt="SIAY (Sistem Informasi Akademik Yahya)"
-                  width="w-full"
-                />
+            <div class="p-4 mb-12 md:w-1/2">
+              <div class="overflow-hidden rounded-md shadow-md">
+                <a
+                  href="https://patunganpremium-production.up.railway.app/"
+                  target="_blank"
+                >
+                  <img
+                    src="dist/img/projects/patunganpremium.webp"
+                    alt="Website Patungan Premium"
+                    width="w-full"
+                  />
+                </a>
               </div>
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3">
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
+                Website Patungan Premium
+              </h3>
+              <p class="text-base font-medium text-secondary">
+                A subscription sharing cost for digital streaming platform
+                service like Netflix, Spotify and etc. That i learn from
+                BuildWithAngga and deployed with railway.app as free hosting
+                services. <br />
+                <span class="italic font-semibold"
+                  >Project Tech Stack: Laravel, Filamentphp, phpMyAdmin</span
+                >
+              </p>
+            </div>
+            <div class="p-4 mb-12 md:w-1/2">
+              <div class="overflow-hidden rounded-md shadow-md">
+                <a href="https://ppdb.sekolahyahya.sch.id/" target="_blank">
+                  <img
+                    src="dist/img/projects/project-siay.webp"
+                    alt="SIAY (Sistem Informasi Akademik Yahya)"
+                    width="w-full"
+                  />
+                </a>
+              </div>
+
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
                 SIAY (Sistem Informasi Akademik Yahya) | Fullstack Developer
               </h3>
-              <p class="font-medium text-base text-secondary">
+              <p class="text-base font-medium text-secondary">
                 Responsible for developing Sistem Informasi Akademik Yahya
                 (SIAY) an application used to handle all the academic system of
                 Sekolah Kristen Yahya (currently handling for Student
                 Registration and Allowance). <br />
-                <span class="font-semibold italic"
+                <span class="italic font-semibold"
                   >Project Tech Stack: Laravel, phpMyAdmin, Bootstrap, Breeze,
                   Midtrans Payment Gateway.</span
                 >
               </p>
             </div>
-            <div class="mb-12 p-4 md:w-1/2">
-              <div class="rounded-md shadow-md overflow-hidden">
+            <div class="p-4 mb-12 md:w-1/2">
+              <div class="overflow-hidden rounded-md shadow-md">
                 <img
                   src="dist/img/projects/project-routine-report.webp"
                   alt="Routine Report Yahya"
                   width="w-full"
                 />
               </div>
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3">
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
                 Routine Report Yahya | Fullstack Developer
               </h3>
-              <p class="font-medium text-base text-secondary">
+              <p class="text-base font-medium text-secondary">
                 Responsible for developing Routine Report Yahya an application
                 used to handle employee routine task and assignment for the
                 Sekolah Yahya IT Department. <br />
-                <span class="font-semibold italic"
+                <span class="italic font-semibold"
                   >Project Tech Stack: Laravel, Bootstrap, phpMyAdmin</span
                 >
               </p>
             </div>
-            <div class="mb-12 p-4 md:w-1/2">
-              <div class="rounded-md shadow-md overflow-hidden">
+            <div class="p-4 mb-12 md:w-1/2">
+              <div class="overflow-hidden rounded-md shadow-md">
                 <img
                   src="dist/img/projects/project-inventarisasi-asset.webp"
                   alt="Sistem Inventarisasi Asset"
                   width="w-full"
                 />
               </div>
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3">
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
                 Sistem Inventarisasi Asset
               </h3>
-              <p class="font-medium text-base text-secondary">
+              <p class="text-base font-medium text-secondary">
                 Responsible for developing Sistem Inventaris Asset Yahya an
                 application used to track and manage an organization's inventory
                 levels, including stock quantities, locations, and conditions.
                 <br />
-                <span class="font-semibold italic"
+                <span class="italic font-semibold"
                   >Project Tech Stack: Laravel, Bootstrap, phpMyAdmin</span
                 >
               </p>
             </div>
-            <div class="mb-12 p-4 md:w-1/2">
-              <div class="rounded-md shadow-md overflow-hidden">
-                <img
-                  src="dist/img/projects/project-yahya-it-tutorial.webp"
-                  alt="Yahya IT Tutorial"
-                  width="w-full"
-                />
+            <div class="p-4 mb-12 md:w-1/2">
+              <div class="overflow-hidden rounded-md shadow-md">
+                <a
+                  href="https://webtutorial.sekolahyahya.sch.id/"
+                  target="_blank"
+                >
+                  <img
+                    src="dist/img/projects/project-yahya-it-tutorial.webp"
+                    alt="Yahya IT Tutorial"
+                    width="w-full"
+                  />
+                </a>
               </div>
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3">
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
                 Yahya IT Tutorial
               </h3>
-              <p class="font-medium text-base text-secondary">
+              <p class="text-base font-medium text-secondary">
                 Responsible for developing a tutorial website using wordpress as
                 a place where staffs and teachers could find a tutorial for
                 troubleshooting easy stuff.
                 <br />
-                <span class="font-semibold italic"
+                <span class="italic font-semibold"
                   >Project Tech Stack: Wordpress, phpMyAdmin
+                </span>
+              </p>
+            </div>
+            <div class="p-4 mb-12 md:w-1/2">
+              <div class="overflow-hidden rounded-md shadow-md">
+                <a
+                  href="https://creativespace.sekolahyahya.sch.id/"
+                  target="_blank"
+                >
+                  <img
+                    src="dist/img/projects/creativespace.webp"
+                    alt="Yahya IT Tutorial"
+                    width="w-full"
+                  />
+                </a>
+              </div>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
+                Creative Space Sekolah Kristen Yahya
+              </h3>
+              <p class="text-base font-medium text-secondary">
+                Launched a platform for students to publish and showcase
+                creative projects like digital art, photography, and more,
+                promoting creative learning
+                <br />
+                <span class="italic font-semibold"
+                  >Project Tech Stack: Wordpress, phpMyAdmin
+                </span>
+              </p>
+            </div>
+            <div class="p-4 mb-12 md:w-1/2">
+              <div class="overflow-hidden rounded-md shadow-md">
+                <a
+                  href="https://umkm-store-template.netlify.app/"
+                  target="_blank"
+                >
+                  <img
+                    src="dist/img/projects/umkm-store-template.webp"
+                    alt="UMKM Store Template"
+                    width="w-full"
+                  />
+                </a>
+              </div>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
+                UMKM Store Template
+              </h3>
+              <p class="text-base font-medium text-secondary">
+                A customizable template for UMKM (small businesses) to build an
+                online store quickly and easily.
+                <br />
+                <span class="italic font-semibold">
+                  Project Tech Stack: HTML, CSS, JavaScript
+                </span>
+              </p>
+            </div>
+
+            <div class="p-4 mb-12 md:w-1/2">
+              <div class="overflow-hidden rounded-md shadow-md">
+                <a
+                  href="https://finance-shayna-landing-page-davegp.netlify.app/"
+                  target="_blank"
+                >
+                  <img
+                    src="dist/img/projects/finance-shayna.webp"
+                    alt="Finance Shayna Landing Page"
+                    width="w-full"
+                  />
+                </a>
+              </div>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
+                Finance Shayna Landing Page
+              </h3>
+              <p class="text-base font-medium text-secondary">
+                A landing page for Finance Shayna to help users understand their
+                financial services and engage with the platform.
+                <br />
+                <span class="italic font-semibold">
+                  Project Tech Stack: HTML, CSS, JavaScript
+                </span>
+              </p>
+            </div>
+
+            <div class="p-4 mb-12 md:w-1/2">
+              <div class="overflow-hidden rounded-md shadow-md">
+                <a
+                  href="https://yahya-info-universitas.netlify.app/"
+                  target="_blank"
+                >
+                  <img
+                    src="dist/img/projects/yahya-info-universitas.webp"
+                    alt="Yahya Info Universitas"
+                    width="w-full"
+                  />
+                </a>
+              </div>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
+                Yahya Info Universitas
+              </h3>
+              <p class="text-base font-medium text-secondary">
+                Platform with Google Docs integration to provide up-to-date
+                information about universities to students.
+                <br />
+                <span class="italic font-semibold">
+                  Project Tech Stack: Google Docs API, HTML, CSS
                 </span>
               </p>
             </div>
@@ -365,15 +502,15 @@
     <!-- Portfolio Section End -->
 
     <!-- WorkingExperiences Section Start -->
-    <section id="workingExperiences" class="pt-36 pb-32 bg-slate-700">
+    <section id="workingExperiences" class="pb-32 pt-36 bg-slate-700">
       <div class="container">
         <div class="w-full px-4">
-          <div class="mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">
+          <div class="mx-auto mb-16 text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">
               Working Experience
             </h4>
             <h2
-              class="font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4"
+              class="mb-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl"
             >
               Crafted Career at
             </h2>
@@ -430,13 +567,13 @@
     <!-- Blog Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact" class="pt-36 pb-32">
+    <section id="contact" class="pb-32 pt-36">
       <div class="container">
         <div class="w-full px-4">
-          <div class="mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
+          <div class="mx-auto mb-16 text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Contact</h4>
             <h2
-              class="font-bold text-dark text-3xl sm:text-4xl lg:text-5xl mb-4"
+              class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl"
             >
               Let's Connect
             </h2>
@@ -458,42 +595,42 @@
             method="POST"
           >
             <div class="w-full px-4 mb-8">
-              <label for="name" class="text-base text-primary font-bold"
+              <label for="name" class="text-base font-bold text-primary"
                 >Your Name</label
               >
               <input
                 type="text"
                 id="name"
                 name="name"
-                class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                class="w-full p-3 rounded-md bg-slate-200 text-dark focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
               />
             </div>
             <div class="w-full px-4 mb-8">
-              <label for="email" class="text-base text-primary font-bold"
+              <label for="email" class="text-base font-bold text-primary"
                 >Email</label
               >
               <input
                 type="email"
                 id="email"
                 name="email"
-                class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                class="w-full p-3 rounded-md bg-slate-200 text-dark focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
               />
             </div>
             <div class="w-full px-4 mb-8">
-              <label for="message" class="text-base text-primary font-bold"
+              <label for="message" class="text-base font-bold text-primary"
                 >Message</label
               >
               <textarea
                 type="input"
                 id="message"
                 name="message"
-                class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"
+                class="w-full h-32 p-3 rounded-md bg-slate-200 text-dark focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
               ></textarea>
             </div>
             <div class="w-full">
               <button
                 type="submit"
-                class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 shadow-lg transition duration-500"
+                class="w-full px-8 py-3 text-base font-semibold text-white transition duration-500 rounded-full shadow-lg bg-primary hover:opacity-80"
               >
                 Send Message
               </button>
@@ -508,39 +645,39 @@
     <!-- Contact Section End -->
 
     <!-- Footer Start -->
-    <footer class="bg-dark pt-24 pb-12">
+    <footer class="pt-24 pb-12 bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
-            <h2 class="font-bold text-4xl text-white mb-5">
+          <div class="w-full px-4 mb-12 font-medium text-slate-300 md:w-1/3">
+            <h2 class="mb-5 text-4xl font-bold text-white">
               Dave Guardyan Pakpahan
             </h2>
-            <h3 class="font-bold text-2xl mb-2">Web Developer & Designer</h3>
+            <h3 class="mb-2 text-2xl font-bold">Web Developer & Designer</h3>
             <p>davegpakpahan@gmail.com</p>
             <p>Jl. Karang Pasundan VI No. 40</p>
             <p>Bandung</p>
           </div>
           <div class="w-full px-4 mb-12 text-white md:w-1/3">
-            <h3 class="font-semiboldbold text-xl mb-5">Blog</h3>
+            <h3 class="mb-5 text-xl font-semiboldbold">Blog</h3>
             <ul class="text-slate-300">
               <li>
                 <a
                   href="#"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="inline-block mb-3 text-base hover:text-primary"
                   >Programming</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="inline-block mb-3 text-base hover:text-primary"
                   >Programming</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="inline-block mb-3 text-base hover:text-primary"
                   >Programming</a
                 >
               </li>
@@ -548,40 +685,40 @@
           </div>
           <!-- Links -->
           <div class="w-full px-4 mb-12 text-white md:w-1/3">
-            <h3 class="font-semiboldbold text-xl mb-5">Quick Links</h3>
+            <h3 class="mb-5 text-xl font-semiboldbold">Quick Links</h3>
             <ul class="text-slate-300">
               <li>
                 <a
                   href="#home"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="inline-block mb-3 text-base hover:text-primary"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="#about"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="inline-block mb-3 text-base hover:text-primary"
                   >About Me</a
                 >
               </li>
               <li>
                 <a
                   href="#portfolio"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="inline-block mb-3 text-base hover:text-primary"
                   >Portfolio</a
                 >
               </li>
               <li>
                 <a
                   href="#workingExperiences"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="inline-block mb-3 text-base hover:text-primary"
                   >Working Experiences</a
                 >
               </li>
               <li>
                 <a
                   href="#contact"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="inline-block mb-3 text-base hover:text-primary"
                   >Contact</a
                 >
               </li>
@@ -594,7 +731,7 @@
             <a
               href="https://www.linkedin.com/in/dave-guardyan-pakpahan/"
               target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
+              class="flex items-center justify-center mr-3 rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
             >
               <svg
                 class="fill-current"
@@ -613,7 +750,7 @@
             <a
               href="https://www.linkedin.com/in/dave-guardyan-pakpahan/"
               target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
+              class="flex items-center justify-center mr-3 rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
             >
               <svg
                 class="fill-current"
@@ -632,7 +769,7 @@
             <a
               href="https://github.com/neet693/"
               target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
+              class="flex items-center justify-center mr-3 rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
             >
               <svg
                 class="fill-current"
@@ -648,7 +785,7 @@
               </svg>
             </a>
           </div>
-          <p class="font-medium text-white text-center">
+          <p class="font-medium text-center text-white">
             Made with <span class="text-pink-500">❤️</span> by
             <a
               href="https://www.instagram.com/dave_gordy/"
@@ -674,7 +811,7 @@
       class="fixed z-[9999] bottom-4 right-4 p-4 h-14 w-14 rounded-full bg-primary hidden justify-center items-center"
     >
       <span
-        class="block w-5 h-5 rotate-45 border-t-2 border-l-2 mt-2 hover:animate-pulse"
+        class="block w-5 h-5 mt-2 rotate-45 border-t-2 border-l-2 hover:animate-pulse"
       ></span>
     </a>
     <!-- back to top end -->
