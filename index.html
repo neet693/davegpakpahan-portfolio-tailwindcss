@@ -1,831 +1,663 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="id" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dist/output.css" />
-    <title>Dave Guardyan Pakpahan Portfolio Website</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6557831258679940"
-     crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <!--  Header Start -->
-    <header
-      class="absolute top-0 left-0 z-10 flex items-center w-full bg-transparent"
-    >
-      <div class="container">
-        <div class="relative flex items-center justify-between">
-          <div class="px-4">
-            <a href="#home" class="block py-6 text-lg font-bold text-primary"
-              >DG</a
-            >
-          </div>
-          <div class="flex items-center px-4">
-            <button
-              id="hamburger"
-              name="hamburger"
-              type="button"
-              class="absolute block right-4 lg:hidden"
-              aria-label="Toggle Navigation Menu"
-            >
-              <span
-                class="transition duration-300 ease-in-out origin-top-left hamburger-line"
-              ></span>
-              <span
-                class="transition duration-300 ease-in-out hamburger-line"
-              ></span>
-              <span
-                class="transition duration-300 ease-in-out origin-bottom-left hamburger-line"
-              ></span>
-            </button>
+    <title>Dave Guardyan Pakpahan — Fullstack Developer</title>
+    <meta
+      name="description"
+      content="Fullstack Developer dengan pengalaman membangun sistem informasi untuk institusi pendidikan. Portfolio, pengalaman kerja, dan kontak."
+    />
 
-            <nav
-              id="nav-menu"
-              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
+
+  <body
+    class="font-sans antialiased text-dark"
+    style="-webkit-font-smoothing: antialiased"
+  >
+    <!-- ============ HEADER ============ -->
+    <header
+      id="site-header"
+      class="fixed inset-x-0 top-0 z-40 transition-all duration-300 border-b border-transparent"
+    >
+      <div class="max-w-5xl px-6 mx-auto">
+        <div class="flex items-center justify-between h-16">
+          <a
+            href="#home"
+            class="font-mono text-sm font-semibold tracking-widest text-dark"
+            >DGP<span class="text-signal">.</span></a
+          >
+
+          <nav class="items-center hidden gap-8 text-sm font-medium md:flex">
+            <a href="#about" class="transition-colors hover:text-signal"
+              >About</a
             >
-              <ul class="block font-semibold lg:flex">
-                <li class="group">
-                  <a
-                    href="#home"
-                    class="py-2 mx-8 text-base text-dark group-hover:text-primary"
-                    >Home</a
-                  >
-                </li>
-                <li class="group">
-                  <a
-                    href="#about"
-                    class="py-2 mx-8 text-base text-dark group-hover:text-primary"
-                    >About</a
-                  >
-                </li>
-                <li class="group">
-                  <a
-                    href="#portfolio"
-                    class="py-2 mx-8 text-base text-dark group-hover:text-primary"
-                    >Portfolio</a
-                  >
-                </li>
-                <li class="group">
-                  <a
-                    href="#workingExperiences"
-                    class="py-2 mx-8 text-base text-dark group-hover:text-primary"
-                    >Working Experience</a
-                  >
-                </li>
-                <li class="group">
-                  <a
-                    href="#blog"
-                    class="py-2 mx-8 text-base text-dark group-hover:text-primary"
-                    >Blog</a
-                  >
-                </li>
-                <li class="group">
-                  <a
-                    href="#contact"
-                    class="py-2 mx-8 text-base text-dark group-hover:text-primary"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </div>
+            <a href="#stack" class="transition-colors hover:text-signal"
+              >Stack</a
+            >
+            <a href="#projects" class="transition-colors hover:text-signal"
+              >Projects</a
+            >
+            <a href="#experience" class="transition-colors hover:text-signal"
+              >Experience</a
+            >
+            <a
+              href="#contact"
+              class="px-4 py-2 ml-2 transition-colors rounded-full bg-dark text-paper hover:bg-signal"
+              >Contact</a
+            >
+          </nav>
+
+          <button
+            id="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            class="md:hidden relative w-8 h-8 flex flex-col items-center justify-center gap-[5px]"
+          >
+            <span class="block w-6 h-[2px] bg-dark"></span>
+            <span class="block w-6 h-[2px] bg-dark"></span>
+            <span class="block w-6 h-[2px] bg-dark"></span>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-nav"
+        class="hidden border-b md:hidden bg-paper border-line"
+      >
+        <div class="flex flex-col gap-4 px-6 py-4 text-sm font-medium">
+          <a href="#about" class="mobile-link">About</a>
+          <a href="#stack" class="mobile-link">Stack</a>
+          <a href="#projects" class="mobile-link">Projects</a>
+          <a href="#experience" class="mobile-link">Experience</a>
+          <a href="#contact" class="mobile-link">Contact</a>
         </div>
       </div>
     </header>
-    <!-- Header End -->
 
-    <!-- Hero Section Start -->
-    <section id="home" class="pt-36">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <div class="self-center w-full px-4 lg:w-1/2">
-            <h1 class="text-base font-semibold text-primary md:text-xl">
-              Halo semua 👋, saya
-              <span class="block mt-1 text-4xl font-bold text-dark lg:text-5xl"
-                >Dave Guardyan Pakpahan</span
-              >
-            </h1>
-            <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">
-              Fullstack Developer
-            </h2>
-            <p
-              class="mb-10 italic font-semibold leading-relaxed text-secondary"
+    <!-- ============ HERO — "system record" ============ -->
+    <section id="home" class="px-6 pb-20 pt-36">
+      <div class="max-w-5xl mx-auto">
+        <p class="mb-4 field-label">Record / 001 — Developer Profile</p>
+
+        <div
+          class="overflow-hidden border border-line rounded-2xl bg-white/60 backdrop-blur-sm"
+        >
+          <div class="grid md:grid-cols-[1.6fr_1fr]">
+            <!-- left: identity -->
+            <div
+              class="p-8 border-b md:p-10 md:border-b-0 md:border-r border-line"
             >
-              Detail-oriented developer crafting innovative solutions for
-              education, thriving in dynamic environments, advancing technology
-              collaboratively
-              <!-- <span class="font-bold text-dark">Bukan!</span> -->
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 mb-6 border rounded-full border-signal/30 bg-signal/5"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-signal"></span>
+                <span class="field-label text-signal">Open to work</span>
+              </div>
+
+              <h1 class="text-4xl md:text-5xl font-bold leading-[1.1] mb-3">
+                Dave Guardyan<br class="hidden md:block" />
+                Pakpahan
+              </h1>
+              <p class="mb-6 text-lg font-medium md:text-xl text-muted">
+                Fullstack Developer — Laravel &amp; PHP
+              </p>
+
+              <p class="max-w-lg mb-8 leading-relaxed text-muted">
+                Membangun sistem informasi internal yang benar-benar dipakai
+                sehari-hari: pendaftaran siswa, kepegawaian, inventaris aset,
+                sampai payment gateway — bukan sekadar landing page. ~2 tahun
+                pengalaman, saat ini di
+                <span class="font-medium text-dark">Sekolah Kristen Yahya</span
+                >.
+              </p>
+
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="#contact"
+                  class="px-6 py-3 text-sm font-semibold transition-colors rounded-full bg-dark text-paper hover:bg-signal"
+                >
+                  Get in Touch
+                </a>
+                <a
+                  href="dist/documents/Dave Guardyan Pakpahan Berkas Kelengkapan - Programming.pdf"
+                  download
+                  class="px-6 py-3 text-sm font-semibold transition-colors border rounded-full border-line hover:border-dark"
+                >
+                  Download CV ↓
+                </a>
+              </div>
+            </div>
+
+            <!-- right: field data -->
+            <div
+              class="p-8 md:p-10 flex flex-col justify-center gap-6 bg-dark/[0.02]"
+            >
+              <div>
+                <p class="mb-1 field-label">Location</p>
+                <p class="font-medium">Bandung, Indonesia</p>
+              </div>
+              <div>
+                <p class="mb-1 field-label">Experience</p>
+                <p class="font-medium">5+ years</p>
+              </div>
+              <div>
+                <p class="mb-1 field-label">Focus</p>
+                <p class="font-medium">Internal systems for education</p>
+              </div>
+              <div>
+                <p class="mb-1 field-label">Core stack</p>
+                <p class="font-medium">Laravel · PHP · MySQL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="px-6 py-20 border-t border-line">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-[200px_1fr] gap-8">
+        <p class="pt-1 field-label">Record / 002 — About</p>
+        <div class="max-w-2xl reveal">
+          <p class="mb-6 text-xl font-medium leading-snug md:text-2xl">
+            Saya fokus pada satu hal: perangkat lunak yang menyelesaikan masalah
+            operasional nyata di institusi pendidikan.
+          </p>
+          <p class="mb-4 leading-relaxed text-muted">
+            Selama ~2 tahun di Sekolah Kristen Yahya, saya bertanggung jawab
+            membangun dan merawat beberapa sistem internal — mulai dari
+            pendaftaran siswa dengan integrasi payment gateway, sistem
+            kepegawaian, hingga inventarisasi aset dengan pelacakan QR code.
+            Sebagian besar pekerjaan saya tidak terlihat dari luar, tapi dipakai
+            setiap hari oleh staf dan guru.
+          </p>
+          <p class="leading-relaxed text-muted">
+            Saya lebih senang mengerjakan sistem yang jelas kebutuhannya dan
+            langsung terpakai, dibanding proyek showcase yang berhenti di tahap
+            demo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STACK ============ -->
+    <section id="stack" class="px-6 py-20 border-t border-line">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-[200px_1fr] gap-8">
+        <p class="pt-1 field-label">Record / 003 — Stack</p>
+        <div class="reveal">
+          <div
+            class="grid grid-cols-2 gap-px overflow-hidden border sm:grid-cols-3 bg-line border-line rounded-xl"
+          >
+            <!-- skill cells -->
+            <div class="p-5 bg-white">
+              <p class="mb-1 font-semibold">Laravel</p>
+              <p class="field-label">Primary framework</p>
+            </div>
+            <div class="p-5 bg-white">
+              <p class="mb-1 font-semibold">PHP</p>
+              <p class="field-label">Backend</p>
+            </div>
+            <div class="p-5 bg-white">
+              <p class="mb-1 font-semibold">MySQL</p>
+              <p class="field-label">Database</p>
+            </div>
+            <div class="p-5 bg-white">
+              <p class="mb-1 font-semibold">JavaScript</p>
+              <p class="field-label">Frontend logic</p>
+            </div>
+            <div class="p-5 bg-white">
+              <p class="mb-1 font-semibold">HTML5 / CSS3</p>
+              <p class="field-label">Markup &amp; styling</p>
+            </div>
+            <div class="p-5 bg-white">
+              <p class="mb-1 font-semibold">Tailwind CSS</p>
+              <p class="field-label">Styling</p>
+            </div>
+            <div class="p-5 bg-white">
+              <p class="mb-1 font-semibold">Bootstrap</p>
+              <p class="field-label">Styling</p>
+            </div>
+            <div class="p-5 bg-white">
+              <p class="mb-1 font-semibold">Filament</p>
+              <p class="field-label">Admin panels</p>
+            </div>
+            <div class="p-5 bg-white">
+              <p class="mb-1 font-semibold">Git</p>
+              <p class="field-label">Version control</p>
+            </div>
+            <div class="p-5 bg-white">
+              <p class="mb-1 font-semibold">Midtrans</p>
+              <p class="field-label">Payment gateway</p>
+            </div>
+            <div class="p-5 bg-white">
+              <p class="mb-1 font-semibold">WordPress</p>
+              <p class="field-label">CMS</p>
+            </div>
+            <div class="p-5 bg-white">
+              <p class="mb-1 font-semibold">AI tools</p>
+              <p class="field-label">Dev workflow</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS — registry table ============ -->
+    <section id="projects" class="px-6 py-20 border-t border-line">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-[200px_1fr] gap-8 mb-8">
+          <p class="pt-1 field-label">Record / 004 — Projects</p>
+          <div class="reveal">
+            <p class="text-xl font-medium leading-snug md:text-2xl">
+              9 proyek, dari sistem sekolah berskala nyata sampai template
+              belajar.
             </p>
+          </div>
+        </div>
+
+        <div
+          class="overflow-hidden bg-white border divide-y reveal border-line rounded-xl divide-line"
+        >
+          <a
+            href="https://ppdb.sekolahyahya.sch.id/"
+            target="_blank"
+            rel="noopener"
+            class="row-hover flex items-center justify-between gap-4 p-5 hover:bg-dark/[0.02] transition-colors"
+          >
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="field-label text-signal">● Live</span>
+                <h3 class="font-semibold truncate">
+                  SIAY — Sistem Informasi Akademik Yahya
+                </h3>
+              </div>
+              <p class="text-sm text-muted">
+                Pendaftaran siswa &amp; sistem SPP dengan integrasi Midtrans.
+                <span class="font-mono text-xs"
+                  >Laravel · Breeze · Midtrans</span
+                >
+              </p>
+            </div>
+            <span class="row-arrow shrink-0">→</span>
+          </a>
+
+          <a
+            href="https://simpeg.sekolahyahya.sch.id/"
+            target="_blank"
+            rel="noopener"
+            class="row-hover flex items-center justify-between gap-4 p-5 hover:bg-dark/[0.02] transition-colors"
+          >
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="field-label text-signal">● Live</span>
+                <h3 class="font-semibold truncate">SIMPEG Sekolah Yahya</h3>
+              </div>
+              <p class="text-sm text-muted">
+                Sistem kepegawaian untuk tugas rutin &amp; administrasi staf.
+                <span class="font-mono text-xs">Laravel · Bootstrap</span>
+              </p>
+            </div>
+            <span class="row-arrow shrink-0">→</span>
+          </a>
+
+          <a
+            href="https://inv.sekolahyahya.sch.id/"
+            target="_blank"
+            rel="noopener"
+            class="row-hover flex items-center justify-between gap-4 p-5 hover:bg-dark/[0.02] transition-colors"
+          >
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="field-label text-signal">● Live</span>
+                <h3 class="font-semibold truncate">
+                  Sistem Inventarisasi Aset
+                </h3>
+              </div>
+              <p class="text-sm text-muted">
+                Pelacakan aset dengan QR code — stok, kategori, kondisi, lokasi.
+                <span class="font-mono text-xs">Laravel · Bootstrap</span>
+              </p>
+            </div>
+            <span class="row-arrow shrink-0">→</span>
+          </a>
+
+          <a
+            href="https://webtutorial.sekolahyahya.sch.id/"
+            target="_blank"
+            rel="noopener"
+            class="row-hover flex items-center justify-between gap-4 p-5 hover:bg-dark/[0.02] transition-colors"
+          >
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="field-label text-signal">● Live</span>
+                <h3 class="font-semibold truncate">Yahya IT Tutorial</h3>
+              </div>
+              <p class="text-sm text-muted">
+                Portal konten tutorial internal untuk staf &amp; guru.
+                <span class="font-mono text-xs"
+                  >Laravel · Filament · MySQL</span
+                >
+              </p>
+            </div>
+            <span class="row-arrow shrink-0">→</span>
+          </a>
+
+          <a
+            href="https://creativespace.sekolahyahya.sch.id/"
+            target="_blank"
+            rel="noopener"
+            class="row-hover flex items-center justify-between gap-4 p-5 hover:bg-dark/[0.02] transition-colors"
+          >
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="field-label text-signal">● Live</span>
+                <h3 class="font-semibold truncate">
+                  Creative Space Sekolah Kristen Yahya
+                </h3>
+              </div>
+              <p class="text-sm text-muted">
+                Platform publikasi karya kreatif siswa.
+                <span class="font-mono text-xs">WordPress</span>
+              </p>
+            </div>
+            <span class="row-arrow shrink-0">→</span>
+          </a>
+
+          <a
+            href="https://patunganpremium-production.up.railway.app/"
+            target="_blank"
+            rel="noopener"
+            class="row-hover flex items-center justify-between gap-4 p-5 hover:bg-dark/[0.02] transition-colors"
+          >
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="field-label text-flag">● Learning project</span>
+                <h3 class="font-semibold truncate">Patungan Premium</h3>
+              </div>
+              <p class="text-sm text-muted">
+                Aplikasi patungan langganan streaming, dipelajari dari
+                BuildWithAngga.
+                <span class="font-mono text-xs">Laravel · Filament</span>
+              </p>
+            </div>
+            <span class="row-arrow shrink-0">→</span>
+          </a>
+
+          <a
+            href="https://umkm-store-template.netlify.app/"
+            target="_blank"
+            rel="noopener"
+            class="row-hover flex items-center justify-between gap-4 p-5 hover:bg-dark/[0.02] transition-colors"
+          >
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="field-label text-muted">● Template</span>
+                <h3 class="font-semibold truncate">UMKM Store Template</h3>
+              </div>
+              <p class="text-sm text-muted">
+                Template toko online untuk UMKM.
+                <span class="font-mono text-xs">HTML · CSS · JavaScript</span>
+              </p>
+            </div>
+            <span class="row-arrow shrink-0">→</span>
+          </a>
+
+          <a
+            href="https://finance-shayna-landing-page-davegp.netlify.app/"
+            target="_blank"
+            rel="noopener"
+            class="row-hover flex items-center justify-between gap-4 p-5 hover:bg-dark/[0.02] transition-colors"
+          >
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="field-label text-muted">● Landing page</span>
+                <h3 class="font-semibold truncate">Finance Shayna</h3>
+              </div>
+              <p class="text-sm text-muted">
+                Landing page layanan finansial.
+                <span class="font-mono text-xs">HTML · CSS · JavaScript</span>
+              </p>
+            </div>
+            <span class="row-arrow shrink-0">→</span>
+          </a>
+
+          <a
+            href="https://yahya-info-universitas.netlify.app/"
+            target="_blank"
+            rel="noopener"
+            class="row-hover flex items-center justify-between gap-4 p-5 hover:bg-dark/[0.02] transition-colors"
+          >
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="field-label text-muted">● Live</span>
+                <h3 class="font-semibold truncate">Yahya Info Universitas</h3>
+              </div>
+              <p class="text-sm text-muted">
+                Info kampus terkini via integrasi Google Docs.
+                <span class="font-mono text-xs"
+                  >Google Docs API · HTML · CSS</span
+                >
+              </p>
+            </div>
+            <span class="row-arrow shrink-0">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="px-6 py-20 border-t border-line">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-[200px_1fr] gap-8">
+        <p class="pt-1 field-label">Record / 005 — Experience</p>
+        <div class="max-w-2xl reveal">
+          <div class="pl-6 border-l-2 border-signal">
+            <p class="mb-1 field-label">2023 — Present</p>
+            <h3 class="mb-1 text-xl font-bold">Software Developer</h3>
+            <p class="mb-4 font-medium text-muted">Sekolah Kristen Yahya</p>
+            <ul
+              class="pl-5 space-y-2 leading-relaxed list-disc list-outside text-muted"
+            >
+              <li>
+                Membangun dan merawat sistem informasi akademik untuk
+                pendaftaran siswa dan pembayaran (SIAY).
+              </li>
+              <li>
+                Mengembangkan sistem kepegawaian untuk administrasi tugas rutin
+                staf (SIMPEG).
+              </li>
+              <li>
+                Membangun sistem inventarisasi aset dengan pelacakan QR code.
+              </li>
+              <li>
+                Mengelola portal tutorial IT internal untuk staf dan guru.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="px-6 py-20 border-t border-line">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-[200px_1fr] gap-8">
+        <p class="pt-1 field-label">Record / 006 — Contact</p>
+
+        <div class="max-w-2xl reveal">
+          <p class="mb-8 text-xl font-medium leading-snug md:text-2xl">
+            Terbuka untuk peluang fullstack developer. Kabari saya lewat form
+            atau kontak langsung.
+          </p>
+
+          <div class="flex flex-wrap mb-10 text-sm gap-x-8 gap-y-3">
+            <a
+              href="mailto:davegpakpahan@gmail.com"
+              class="flex items-center gap-2 transition-colors hover:text-signal"
+            >
+              <span class="field-label">Email</span> davegpakpahan@gmail.com
+            </a>
             <a
               href="https://api.whatsapp.com/send/?phone=6282350496224&text&type=phone_number&app_absent=0"
-              class="px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out rounded-full bg-primary hover:shadow-lg opacity-80"
-              >Hire Me!</a
+              target="_blank"
+              rel="noopener"
+              class="flex items-center gap-2 transition-colors hover:text-signal"
             >
-            <a
-              class="px-8 py-3 text-base transition duration-300 hover:text-primary hover:underline hover:font-semibold"
-              href="dist/documents/Dave Guardyan Pakpahan Berkas Kelengkapan - Programming.pdf"
-              download="Dave Guardyan Pakpahan Berkas Kelengkapan - Programming.pdf"
-              target="-blank"
-              >Download My CV</a
-            >
-          </div>
-
-          <div class="self-end w-full px-4 lg:w-1/2">
-            <div class="relative mt-10 lg:mt-9 lg:right-0">
-              <img
-                src="dist/img/davegpakpahan.webp"
-                alt="davegpakpahan"
-                class="max-w-full mx-auto"
-              />
-              <span
-                class="absolute bottom-0 -translate-x-1/2 -z-10 left-1/2 md:scale-125"
-              >
-                <svg
-                  width="400"
-                  height="700"
-                  viewBox="0 0 200 200"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill="#14b8a6"
-                    d="M67.9,-25.9C72.9,-6.6,51.5,17.3,26.9,34.7C2.3,52,-25.4,62.6,-40.3,52.5C-55.1,42.4,-57.1,11.6,-48.2,-12.9C-39.3,-37.4,-19.7,-55.7,5.9,-57.6C31.4,-59.5,62.9,-45.1,67.9,-25.9Z"
-                    transform="translate(100 100) scale(1.2)"
-                  />
-                </svg>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Hero Section End -->
-
-    <!-- About Section Start -->
-    <section id="about" class="pb-32 pt-36">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h4 class="mb-3 text-lg font-bold uppercase text-primary">
-              About Me
-            </h4>
-            <h2 class="max-w-md mb-5 text-3xl font-bold text-dark lg:text-4xl">
-              Innovative Problem Solver | Tech Pioneer
-            </h2>
-            <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">
-              Experienced software developer with a proven track record of 5+
-              years in crafting innovative solutions at Sekolah Kristen Yahya.
-              Proficient in developing custom software to meet the unique
-              requirements of educational institutions. Detail-oriented and
-              results-driven, with a knack for problem-solving and
-              collaboration. Skilled in various programming languages and
-              frameworks, I thrive in dynamic environments where I can
-              contribute to the advancement of technology
-            </p>
-          </div>
-          <div class="w-full px-4 lg:w-1/2">
-            <h3 class="pt-10 mb-4 text-2xl font-semibold text-dark lg:text-3xl">
-              Let's Connect
-            </h3>
-            <p class="mb-6 text-base font-medium text-secondary lg:text-lg">
-              Stay updated with exclusive insights, project updates, and
-              inspirational content on social media. Let's engage in innovative
-              discussions!
-            </p>
-            <div class="flex items-center">
-              <!-- LinkedIn -->
-              <a
-                href="https://www.linkedin.com/in/dave-guardyan-pakpahan/"
-                target="_blank"
-                class="flex items-center justify-center mr-3 rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
-              >
-                <svg
-                  class="fill-current"
-                  width="20px"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>LinkedIn</title>
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                  />
-                </svg>
-              </a>
-              <!-- Istagram -->
-              <a
-                href="https://instagram.com/dave_gordy"
-                target="_blank"
-                class="flex items-center justify-center mr-3 rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
-              >
-                <svg
-                  class="fill-current"
-                  width="20px"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Instagram</title>
-                  <path
-                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
-                  />
-                </svg>
-              </a>
-              <!-- Github -->
-              <a
-                href="https://github.com/neet693/"
-                target="_blank"
-                class="flex items-center justify-center mr-3 rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
-              >
-                <svg
-                  class="fill-current"
-                  width="20px"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>GitHub</title>
-                  <path
-                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- About Section End -->
-
-    <!-- Portfolio Section Start -->
-    <section id="portfolio" class="pb-16 pt-36 bg-slate-100">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="max-w-xl mx-auto mb-16 text-center">
-            <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
-            <h2
-              class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl"
-            >
-              My Projects
-            </h2>
-            <p class="font-medium text-md text-secondary md:text-lg">
-              From interactive educational apps to online management systems,
-              delve into innovative works showcasing my expertise and dedication
-              in software development.
-            </p>
-          </div>
-          <div class="flex flex-wrap justify-center w-full px-4">
-            <!-- Project Places -->
-            <div class="p-4 mb-12 md:w-1/2">
-              <div class="overflow-hidden rounded-md shadow-md">
-                <a
-                  href="https://patunganpremium-production.up.railway.app/"
-                  target="_blank"
-                >
-                  <img
-                    src="dist/img/projects/patunganpremium.webp"
-                    alt="Website Patungan Premium"
-                    width="w-full"
-                  />
-                </a>
-              </div>
-              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
-                Website Patungan Premium
-              </h3>
-              <p class="text-base font-medium text-secondary">
-                A subscription sharing cost for digital streaming platform
-                service like Netflix, Spotify and etc. That i learn from
-                BuildWithAngga and deployed with railway.app as free hosting
-                services. <br />
-                <span class="italic font-semibold"
-                  >Project Tech Stack: Laravel, Filamentphp, phpMyAdmin</span
-                >
-              </p>
-            </div>
-            <div class="p-4 mb-12 md:w-1/2">
-              <div class="overflow-hidden rounded-md shadow-md">
-                <a href="https://ppdb.sekolahyahya.sch.id/" target="_blank">
-                  <img
-                    src="dist/img/projects/project-siay.webp"
-                    alt="SIAY (Sistem Informasi Akademik Yahya)"
-                    width="w-full"
-                  />
-                </a>
-              </div>
-
-              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
-                SIAY (Sistem Informasi Akademik Yahya) | Fullstack Developer
-              </h3>
-              <p class="text-base font-medium text-secondary">
-                Responsible for developing Sistem Informasi Akademik Yahya
-                (SIAY) an application used to handle all the academic system of
-                Sekolah Kristen Yahya (currently handling for Student
-                Registration and Allowance). <br />
-                <span class="italic font-semibold"
-                  >Project Tech Stack: Laravel, phpMyAdmin, Bootstrap, Breeze,
-                  Midtrans Payment Gateway.</span
-                >
-              </p>
-            </div>
-            <div class="p-4 mb-12 md:w-1/2">
-              <div class="overflow-hidden rounded-md shadow-md">
-                <a href="https://simpeg.sekolahyahya.sch.id/" target="_blank">
-                  <img
-                    src="dist/img/projects/project-routine-report.webp"
-                    alt=" SIMPEG Sekolah Yahya Yahya"
-                    width="w-full"
-                  />
-                </a>
-              </div>
-              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
-                SIMPEG Sekolah Yahya (Human Resource Information System) |
-                Fullstack Developer
-              </h3>
-              <p class="text-base font-medium text-secondary">
-                Responsible for developing Routine SIMPEG Sekolah Yahya an
-                application used to handle employee routine task and assignment
-                and employment for the Sekolah Yahya. <br />
-                <span class="italic font-semibold"
-                  >Project Tech Stack: Laravel, Bootstrap, phpMyAdmin</span
-                >
-              </p>
-            </div>
-            <div class="p-4 mb-12 md:w-1/2">
-              <div class="overflow-hidden rounded-md shadow-md">
-                <a href="https://inv.sekolahyahya.sch.id/" target="_blank">
-                  <img
-                    src="dist/img/projects/project-inventarisasi-asset.webp"
-                    alt="Sistem Inventarisasi Asset"
-                    width="w-full"
-                  />
-                </a>
-              </div>
-              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
-                Sistem Inventarisasi Asset
-              </h3>
-              <p class="text-base font-medium text-secondary">
-                Responsible for developing Sistem Inventaris Asset Yahya an
-                application used to track and manage an organization's inventory
-                / asset including stock levels, categories, and maintenance
-                schedules, locations, and conditions with a QR Scanning as
-                tracking system.
-                <br />
-                <span class="italic font-semibold"
-                  >Project Tech Stack: Laravel, Bootstrap, phpMyAdmin</span
-                >
-              </p>
-            </div>
-            <div class="p-4 mb-12 md:w-1/2">
-              <div class="overflow-hidden rounded-md shadow-md">
-                <a
-                  href="https://webtutorial.sekolahyahya.sch.id/"
-                  target="_blank"
-                >
-                  <img
-                    src="dist/img/projects/project-yahya-it-tutorial.webp"
-                    alt="Yahya IT Tutorial"
-                    width="w-full"
-                  />
-                </a>
-              </div>
-              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
-                Yahya IT Tutorial
-              </h3>
-              <p class="text-base font-medium text-secondary">
-                Responsible for implementing a project from BuildWith Angga’s
-                class using Laravel 11, Filament, and MySQL, and further
-                developing it into WebTutorial Yahya as a portal where staffs
-                and teachers could easily access and manage tutorial content.
-                <br />
-                <span class="italic font-semibold"
-                  >Project Tech Stack: Laravel, Filamentphp, MySQL
-                </span>
-              </p>
-            </div>
-            <div class="p-4 mb-12 md:w-1/2">
-              <div class="overflow-hidden rounded-md shadow-md">
-                <a
-                  href="https://creativespace.sekolahyahya.sch.id/"
-                  target="_blank"
-                >
-                  <img
-                    src="dist/img/projects/creativespace.webp"
-                    alt="Yahya IT Tutorial"
-                    width="w-full"
-                  />
-                </a>
-              </div>
-              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
-                Creative Space Sekolah Kristen Yahya
-              </h3>
-              <p class="text-base font-medium text-secondary">
-                Launched a platform for students to publish and showcase
-                creative projects like digital art, photography, and more,
-                promoting creative learning
-                <br />
-                <span class="italic font-semibold"
-                  >Project Tech Stack: Wordpress, phpMyAdmin
-                </span>
-              </p>
-            </div>
-            <div class="p-4 mb-12 md:w-1/2">
-              <div class="overflow-hidden rounded-md shadow-md">
-                <a
-                  href="https://umkm-store-template.netlify.app/"
-                  target="_blank"
-                >
-                  <img
-                    src="dist/img/projects/umkm-store-template.webp"
-                    alt="UMKM Store Template"
-                    width="w-full"
-                  />
-                </a>
-              </div>
-              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
-                UMKM Store Template
-              </h3>
-              <p class="text-base font-medium text-secondary">
-                A customizable template for UMKM (small businesses) to build an
-                online store quickly and easily.
-                <br />
-                <span class="italic font-semibold">
-                  Project Tech Stack: HTML, CSS, JavaScript
-                </span>
-              </p>
-            </div>
-
-            <div class="p-4 mb-12 md:w-1/2">
-              <div class="overflow-hidden rounded-md shadow-md">
-                <a
-                  href="https://finance-shayna-landing-page-davegp.netlify.app/"
-                  target="_blank"
-                >
-                  <img
-                    src="dist/img/projects/finance-shayna.webp"
-                    alt="Finance Shayna Landing Page"
-                    width="w-full"
-                  />
-                </a>
-              </div>
-              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
-                Finance Shayna Landing Page
-              </h3>
-              <p class="text-base font-medium text-secondary">
-                A landing page for Finance Shayna to help users understand their
-                financial services and engage with the platform.
-                <br />
-                <span class="italic font-semibold">
-                  Project Tech Stack: HTML, CSS, JavaScript
-                </span>
-              </p>
-            </div>
-
-            <div class="p-4 mb-12 md:w-1/2">
-              <div class="overflow-hidden rounded-md shadow-md">
-                <a
-                  href="https://yahya-info-universitas.netlify.app/"
-                  target="_blank"
-                >
-                  <img
-                    src="dist/img/projects/yahya-info-universitas.webp"
-                    alt="Yahya Info Universitas"
-                    width="w-full"
-                  />
-                </a>
-              </div>
-              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
-                Yahya Info Universitas
-              </h3>
-              <p class="text-base font-medium text-secondary">
-                Platform with Google Docs integration to provide up-to-date
-                information about universities to students.
-                <br />
-                <span class="italic font-semibold">
-                  Project Tech Stack: Google Docs API, HTML, CSS
-                </span>
-              </p>
-            </div>
-            <!--  Project Places -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Portfolio Section End -->
-
-    <!-- WorkingExperiences Section Start -->
-    <section id="workingExperiences" class="pb-32 pt-36 bg-slate-700">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="mx-auto mb-16 text-center">
-            <h4 class="mb-2 text-lg font-semibold text-primary">
-              Working Experience
-            </h4>
-            <h2
-              class="mb-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl"
-            >
-              Crafted Career at
-            </h2>
-            <p class="font-medium text-md text-secondary md:text-lg">
-              Explore my intriguing career journey, where I've contributed to
-              various projects that inspire and create positive impact.
-            </p>
-          </div>
-        </div>
-        <div class="w-full px-4">
-          <div class="flex flex-wrap items-center justify-center">
-            <a
-              href="https://sekolahyahya.sch.id/"
-              class="max-w-[360px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
-            >
-              <img
-                src="dist/img/clients/logo-sky.png"
-                alt="Sekolah Kristen Yahya"
-              />
-            </a>
-            <!-- Fake Clients -->
-            <!-- <a
-              href="#"
-              class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
-            >
-              <img src="dist/img/clients/google.svg" alt="Google" />
+              <span class="field-label">WhatsApp</span> Chat langsung
             </a>
             <a
-              href="#"
-              class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
+              href="https://www.linkedin.com/in/dave-guardyan-pakpahan/"
+              target="_blank"
+              rel="noopener"
+              class="flex items-center gap-2 transition-colors hover:text-signal"
             >
-              <img src="dist/img/clients/gojek.svg" alt="Gojek" />
+              <span class="field-label">LinkedIn</span> /dave-guardyan-pakpahan
             </a>
             <a
-              href="#"
-              class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
+              href="https://github.com/neet693/"
+              target="_blank"
+              rel="noopener"
+              class="flex items-center gap-2 transition-colors hover:text-signal"
             >
-              <img src="dist/img/clients/tokopedia.svg" alt="Tokopedia" />
+              <span class="field-label">GitHub</span> /neet693
             </a>
-            <a
-              href="#"
-              class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
-            >
-              <img src="dist/img/clients/traveloka.svg" alt="Traveloka" />
-            </a> -->
-            <!-- Fake Client End -->
           </div>
-        </div>
-      </div>
-    </section>
-    <!-- Clients Section End -->
 
-    <!-- Blog Section Start -->
-    <!-- Blog Section End -->
-
-    <!-- Contact Section Start -->
-    <section id="contact" class="pb-32 pt-36">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="mx-auto mb-16 text-center">
-            <h4 class="mb-2 text-lg font-semibold text-primary">Contact</h4>
-            <h2
-              class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl"
-            >
-              Let's Connect
-            </h2>
-            <p class="font-medium text-md text-secondary md:text-lg">
-              Excited for collaboration! Questions? Reach out via email or phone
-              to discuss project ideas.
-            </p>
-          </div>
-        </div>
-
-        <!-- part contact start -->
-        <!-- <form
-          action="https://formsubmit.co/9780799fa5b1c5ce4c278c651fce5e13"
-          method="POST"
-        > -->
-        <div class="w-full lg:w-2/3 lg:mx-auto">
           <form
             action="https://formsubmit.co/9780799fa5b1c5ce4c278c651fce5e13"
             method="POST"
+            class="p-6 space-y-5 bg-white border border-line rounded-xl"
           >
-            <div class="w-full px-4 mb-8">
-              <label for="name" class="text-base font-bold text-primary"
-                >Your Name</label
-              >
+            <div>
+              <label for="name" class="block mb-2 field-label">Name</label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                class="w-full p-3 rounded-md bg-slate-200 text-dark focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                required
+                class="w-full px-4 py-3 border rounded-lg border-line bg-paper focus:outline-none focus:ring-2 focus:ring-signal/40 focus:border-signal"
               />
             </div>
-            <div class="w-full px-4 mb-8">
-              <label for="email" class="text-base font-bold text-primary"
-                >Email</label
-              >
+            <div>
+              <label for="email" class="block mb-2 field-label">Email</label>
               <input
                 type="email"
                 id="email"
                 name="email"
-                class="w-full p-3 rounded-md bg-slate-200 text-dark focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                required
+                class="w-full px-4 py-3 border rounded-lg border-line bg-paper focus:outline-none focus:ring-2 focus:ring-signal/40 focus:border-signal"
               />
             </div>
-            <div class="w-full px-4 mb-8">
-              <label for="message" class="text-base font-bold text-primary"
+            <div>
+              <label for="message" class="block mb-2 field-label"
                 >Message</label
               >
               <textarea
-                type="input"
                 id="message"
                 name="message"
-                class="w-full h-32 p-3 rounded-md bg-slate-200 text-dark focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                rows="4"
+                required
+                class="w-full px-4 py-3 border rounded-lg border-line bg-paper focus:outline-none focus:ring-2 focus:ring-signal/40 focus:border-signal"
               ></textarea>
             </div>
-            <div class="w-full">
-              <button
-                type="submit"
-                class="w-full px-8 py-3 text-base font-semibold text-white transition duration-500 rounded-full shadow-lg bg-primary hover:opacity-80"
-              >
-                Send Message
-              </button>
-            </div>
+            <button
+              type="submit"
+              class="w-full py-3 font-semibold transition-colors rounded-lg bg-dark text-paper hover:bg-signal"
+            >
+              Send Message
+            </button>
           </form>
         </div>
-        <!-- </form> -->
-
-        <!-- part contact end -->
       </div>
     </section>
-    <!-- Contact Section End -->
 
-    <!-- Footer Start -->
-    <footer class="pt-24 pb-12 bg-dark">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-12 font-medium text-slate-300 md:w-1/3">
-            <h2 class="mb-5 text-4xl font-bold text-white">
-              Dave Guardyan Pakpahan
-            </h2>
-            <h3 class="mb-2 text-2xl font-bold">Web Developer & Designer</h3>
-            <p>davegpakpahan@gmail.com</p>
-            <p>Jl. Karang Pasundan VI No. 40</p>
-            <p>Bandung</p>
-          </div>
-          <div class="w-full px-4 mb-12 text-white md:w-1/3">
-            <h3 class="mb-5 text-xl font-semiboldbold">Blog</h3>
-            <ul class="text-slate-300">
-              <li>
-                <a
-                  href="https://buildwithangga.com/talent/davegpakpahan"
-                  class="inline-block mb-3 text-base hover:text-primary"
-                  >BWA Talent Portfolio</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://webtutorial.sekolahyahya.sch.id/author/dave"
-                  class="inline-block mb-3 text-base hover:text-primary"
-                  >Contributed Article</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="inline-block mb-3 text-base hover:text-primary"
-                  >Programming</a
-                >
-              </li>
-            </ul>
-          </div>
-          <!-- Links -->
-          <div class="w-full px-4 mb-12 text-white md:w-1/3">
-            <h3 class="mb-5 text-xl font-semiboldbold">Quick Links</h3>
-            <ul class="text-slate-300">
-              <li>
-                <a
-                  href="#home"
-                  class="inline-block mb-3 text-base hover:text-primary"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  class="inline-block mb-3 text-base hover:text-primary"
-                  >About Me</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#portfolio"
-                  class="inline-block mb-3 text-base hover:text-primary"
-                  >Portfolio</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#workingExperiences"
-                  class="inline-block mb-3 text-base hover:text-primary"
-                  >Working Experiences</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  class="inline-block mb-3 text-base hover:text-primary"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="w-full pt-10 border-t border-slate-700">
-          <div class="flex items-center justify-center mb-5">
-            <!-- LinkedIn -->
-            <a
-              href="https://www.linkedin.com/in/dave-guardyan-pakpahan/"
-              target="_blank"
-              class="flex items-center justify-center mr-3 rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
-            >
-              <svg
-                class="fill-current"
-                width="20px"
-                role="img"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>LinkedIn</title>
-                <path
-                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                />
-              </svg>
-            </a>
-            <!-- Istagram -->
-            <a
-              href="https://www.linkedin.com/in/dave-guardyan-pakpahan/"
-              target="_blank"
-              class="flex items-center justify-center mr-3 rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
-            >
-              <svg
-                class="fill-current"
-                width="20px"
-                role="img"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Instagram</title>
-                <path
-                  d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
-                />
-              </svg>
-            </a>
-            <!-- Github -->
-            <a
-              href="https://github.com/neet693/"
-              target="_blank"
-              class="flex items-center justify-center mr-3 rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:bg-primary hover:text-white"
-            >
-              <svg
-                class="fill-current"
-                width="20px"
-                role="img"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>GitHub</title>
-                <path
-                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                />
-              </svg>
-            </a>
-          </div>
-          <p class="font-medium text-center text-white">
-            Made with <span class="text-pink-500">❤️</span> by
-            <a
-              href="https://www.instagram.com/dave_gordy/"
-              target="_blank"
-              class="font-bold text-primary"
-            >
-              Dave Guardyan Pakpahan</a
-            >
-            |
-            <a href="https://www.tailwindcss.com" class="font-bold text-sky-500"
-              >TailwindCSS</a
-            >
-          </p>
+    <!-- ============ FOOTER ============ -->
+    <footer class="px-6 py-10 border-t border-line">
+      <div
+        class="flex flex-col items-center justify-between max-w-5xl gap-4 mx-auto text-sm sm:flex-row text-muted"
+      >
+        <p class="font-mono text-xs">
+          © 2026 Dave Guardyan Pakpahan — Bandung, Indonesia
+        </p>
+        <div class="flex gap-6">
+          <a
+            href="https://buildwithangga.com/talent/davegpakpahan"
+            target="_blank"
+            rel="noopener"
+            class="transition-colors hover:text-signal"
+            >BWA Talent</a
+          >
+          <a
+            href="https://webtutorial.sekolahyahya.sch.id/author/dave"
+            target="_blank"
+            rel="noopener"
+            class="transition-colors hover:text-signal"
+            >Articles</a
+          >
+          <a href="#home" class="transition-colors hover:text-signal"
+            >Back to top ↑</a
+          >
         </div>
       </div>
     </footer>
-    <!-- Footer End -->
 
-    <!-- back to top start -->
-    <a
-      href="#home"
-      id="to-top"
-      class="fixed z-[9999] bottom-4 right-4 p-4 h-14 w-14 rounded-full bg-primary hidden justify-center items-center"
-    >
-      <span
-        class="block w-5 h-5 mt-2 rotate-45 border-t-2 border-l-2 hover:animate-pulse"
-      ></span>
-    </a>
-    <!-- back to top end -->
+    <script>
+      // header shadow on scroll
+      const header = document.getElementById("site-header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 12) {
+          header.classList.add(
+            "bg-paper/90",
+            "backdrop-blur-sm",
+            "border-line",
+            "shadow-sm",
+          );
+        } else {
+          header.classList.remove(
+            "bg-paper/90",
+            "backdrop-blur-sm",
+            "border-line",
+            "shadow-sm",
+          );
+        }
+      });
 
-    <script src="dist/js/script.js"></script>
+      // mobile nav
+      const hamburger = document.getElementById("hamburger");
+      const mobileNav = document.getElementById("mobile-nav");
+      hamburger.addEventListener("click", () => {
+        const isOpen = mobileNav.classList.toggle("hidden") === false;
+        hamburger.classList.toggle("open", isOpen);
+        hamburger.setAttribute("aria-expanded", isOpen);
+      });
+      document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileNav.classList.add("hidden");
+          hamburger.classList.remove("open");
+          hamburger.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // scroll reveal
+      const revealEls = document.querySelectorAll(".reveal");
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      revealEls.forEach((el) => io.observe(el));
+    </script>
   </body>
 </html>

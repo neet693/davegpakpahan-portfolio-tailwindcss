@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Sans", "Inter", sans-serif;
+  background-color: theme("colors.paper");
 }
 
 .navbar-fixed {
@@ -25,4 +26,70 @@ body {
 
 .hamburger-active > span:nth-child(3) {
   @apply -rotate-45;
+}
+
+/* --- Record / registry design system (portfolio revamp) --- */
+
+.field-label {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  @apply text-[0.7rem] tracking-[0.14em] uppercase text-muted;
+}
+
+.mobile-link {
+  @apply block py-1;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+.row-arrow {
+  @apply shrink-0 opacity-40;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.row-hover:hover .row-arrow {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+#hamburger span {
+  transition: all 0.25s ease;
+}
+
+#hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+#hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid theme("colors.signal");
+  outline-offset: 3px;
 }
